@@ -1,63 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Simon</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
-      rel="stylesheet"
-    />
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-  </head>
-
-  <body>
-    <h1 id="level-title">Press A Key to Start</h1>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
     <div class="container">
-      <div class="row">
-        <div
-          type="button"
-          id="green"
-          class="btn green"
-          onclick="moveCharacter('green')"
-        ></div>
+        <div class="red flame"></div>
+        <div class="orange flame"></div>
+        <div class="yellow flame"></div>
+        <div class="white flame"></div>
+        <div class="blue flame"></div>
+        <div class="black flame"></div>
 
-        <div
-          type="button"
-          id="red"
-          class="btn red"
-          onclick="moveCharacter('red')"
-        ></div>
-      </div>
-
-      <div class="row">
-        <div
-          type="button"
-          id="yellow"
-          class="btn yellow"
-          onclick="moveCharacter('yellow')"
-        ></div>
-        <div
-          type="button"
-          id="blue"
-          class="btn blue"
-          onclick="moveCharacter('blue')"
-        ></div>
-      </div>
-
-      <div id="character">
-        <img
-          src="/img/3d-removebg-preview.png"
-          alt=""
-          style="width: 195px; height: 161px"
-        />
-      </div>
-      <!-- <button id="button" onclick="moveCharacter()">Click Me!</button>👾 -->
-      <!-- Add an image element for game over -->
-      <img id="gameOverImage" src="/img/3d.png" alt="Game Over" />
     </div>
-    <script src="./game.js"></script>
-    <!-- <script src="test.js"></script> -->
-  </body>
+
+    <!-- <script src="sript.js"></script> -->
+</body>
 </html>
