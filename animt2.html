@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #character {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    #button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="character">👾</div>
+<button id="button" onclick="moveCharacter()">Click Me!</button>
+
+<script>
+  function moveCharacter() {
+    // Get the character and button elements
+    var character = document.getElementById('character');
+    var button = document.getElementById('button');
+
+    // Get the button's position
+    var buttonRect = button.getBoundingClientRect();
+
+    // Calculate the distance to move the character towards the button
+    var deltaX = buttonRect.left - character.offsetLeft;
+    var deltaY = buttonRect.top - character.offsetTop;
+
+    // Apply the translation to move the character towards the button
+    character.style.transform = 'translate(' + deltaX + 'px, ' + deltaY + 'px)';
+
+    // Optional: You can reset the character's position after a delay
+    setTimeout(function () {
+      character.style.transform = 'translate(0, 0)';
+    }, 1000);
+  }
+</script>
+
+</body>
+</html>

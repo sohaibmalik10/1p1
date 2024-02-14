@@ -1,0 +1,94 @@
+body {
+  text-align: center;
+  background-color :#011F3F;
+}
+#level-title {
+  font-family: "press start 2P", cursive;
+  font-size: 3rem;
+  margin: 5%;
+  color: #FEF2BF;
+  
+}
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+  /* background: lightblue url("img/fuck-you-symbol-comic-style_23-2148667271.jpg") no-repeat fixed center;  */
+}
+
+.red {
+  background-color: red;
+}
+.green
+{
+  background-color: green;
+
+}
+.blue
+{
+  background-color: blue;
+
+}
+.yellow
+{
+  background-color: yellow;
+}
+.pressed
+{
+  background-color: grey;
+  box-shadow: 0 0 20px white;
+
+}
+
+/* //animate click */
+#character {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+#button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor:pointer;
+}
+/* }.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%; */
+
+  /* .move {
+    transition: transform 0.5s ease-in-out;
+  } */
+/* 
+  #button1, #button2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  } */
+  #gameOverImage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

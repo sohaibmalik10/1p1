@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #character {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    #button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="character">👾</div>
+<button id="button" onclick="animateCharacter()">Click Me!</button>
+
+<script>
+  function animateCharacter() {
+    // Get the character element
+    var character = document.getElementById('character');
+
+    // Add a class to trigger the bounce animation
+    character.classList.add('bounce');
+
+    // Remove the class after the animation is complete
+    setTimeout(function () {
+      character.classList.remove('bounce');
+    }, 500);
+  }
+</script>
+
+</body>
+</html>

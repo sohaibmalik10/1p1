@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #character {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .move {
+      transition: transform 0.5s ease-in-out;
+    }
+
+    #button1, #button2 {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="character">👾</div>
+<button id="button1" onclick="moveCharacter('button1')">Move to Button 1</button>
+<button id="button2" onclick="moveCharacter('button2')">Move to Button 2</button>
+
+<script>
+  function moveCharacter(buttonId) {
+    // Get the character and button elements
+    var character = document.getElementById('character');
+    var button = document.getElementById(buttonId);
+
+    // Get the button's position
+    var buttonRect = button.getBoundingClientRect();
+
+    // Calculate the distance to move the character towards the button
+    var deltaX = buttonRect.left - character.offsetLeft;
+    var deltaY = buttonRect.top - character.offsetTop;
+
+    // Apply the translation to move the character towards the button
+    character.classList.add('move');
+    character.style.transform = 'translate(' + deltaX + 'px, ' + deltaY + 'px)';
+
+    // Reset the character's position after a delay
+    setTimeout(function () {
+      character.style.transform = 'translate(0, 0)';
+      // Remove the 'move' class to reset the animation
+      character.classList.remove('move');
+    }, 1000);
+  }
+</script>
+</body>
+</html>
